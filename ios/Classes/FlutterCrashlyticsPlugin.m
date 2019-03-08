@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "Fabric.h"
+//TODO: removed fabric.h because xcode can't find that it's installed
+//#import "Fabric.h"
 #import "Crashlytics.h"
 #import "FlutterCrashlyticsPlugin.h"
 
@@ -35,7 +36,8 @@
 
 - (void)handleMethodCall:(FlutterMethodCall *)call result:(FlutterResult)result {
     if ([@"initialize" isEqualToString:call.method]) {
-        [Fabric with:@[[Crashlytics self]]];
+        //TODO: removed fabric.h because xcode can't find that it's installed
+        //[Fabric with:@[[Crashlytics self]]];
         _isFabricInitialized = true;
         result(nil);
     } else if (_isFabricInitialized) {
